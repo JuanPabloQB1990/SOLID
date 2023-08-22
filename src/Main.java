@@ -1,10 +1,19 @@
 public class Main {
 
     public static void main(String[] args) {
-        Comparendo comparendo =  new Comparendo();
-        comparendo.construirFotoMulta(80, "CARRO");
+        Mula mula = new Mula();
+        Comparendo comparendo =  new Comparendo(mula);
         comparendo.construirFotoMulta(200, "MULA");
-        comparendo.construirFotoMulta(40, "CAMION");
-        comparendo.construirFotoMulta(40, "AVION");
+
+        Carro carro = new Carro();
+        Comparendo comparendo2 =  new Comparendo(carro);
+        comparendo2.construirFotoMulta(80, "CARRO");
+
+        Avion avion = new Avion();
+        Comparendo comparendo3 =  new Comparendo(avion);
+        comparendo3.construirFotoMulta(500, "AVION");
+
+        //comparendo.construirFotoMulta(40, "CAMION");
+        //comparendo.construirFotoMulta(40, "AVION");
     }
 }
