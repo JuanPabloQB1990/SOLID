@@ -22,10 +22,5 @@ public class Mula extends Vehiculo {
         return -1;
     }
 
-    @Override
-    public String enviarCorreoFotomulta() {
-        String cuerpoMensaje = "//enviando correo para el tipo mula.";
-        String asunto = "//asunto: comparendo mula";
-        return   asunto + cuerpoMensaje;
-    }
+
 }

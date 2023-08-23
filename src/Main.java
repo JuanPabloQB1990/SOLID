@@ -13,7 +13,5 @@ public class Main {
         Comparendo comparendo3 =  new Comparendo(avion);
         comparendo3.construirFotoMulta(500, "AVION");
 
-        //comparendo.construirFotoMulta(40, "CAMION");
-        //comparendo.construirFotoMulta(40, "AVION");
     }
 }

@@ -22,10 +22,5 @@ public class Camion extends Vehiculo{
         return -1;
     }
 
-    @Override
-    public String enviarCorreoFotomulta() {
-        String cuerpoMensaje = "//enviando correo para el tipo camion.";
-        String asunto = "//asunto: comparendo camion";
-        return   asunto + cuerpoMensaje;
-    }
+
 }

@@ -6,10 +6,14 @@ public class Comparendo {
     }
 
     public void construirFotoMulta(int velocidad, String tipoVehiculo) {
-
+        // calcula comparendo deacuerdo al tipo de vehiculo
         int codigoComparendo = vehiculo.calcularComparendo(velocidad, tipoVehiculo);
-        String cuerpoCorreo = vehiculo.enviarCorreoFotomulta();
 
+        //envio de correos
+        EnviarCorreos correo = new EnviarCorreos();
+        String cuerpoCorreo = correo.enviarCorreoFotomulta(tipoVehiculo);
+
+        // muestra comparendo
         MostrarComparendo comparendo = new MostrarComparendo();
         comparendo.imprimirComparendo(codigoComparendo, cuerpoCorreo, tipoVehiculo);
     }

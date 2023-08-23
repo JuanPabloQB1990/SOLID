@@ -23,10 +23,4 @@ public class Avion extends Vehiculo{
         return -1;
     }
 
-    @Override
-    public String enviarCorreoFotomulta() {
-        String cuerpoMensaje = "//enviando correo para el tipo avion.";
-        String asunto = "//asunto: comparendo avion";
-        return   asunto + cuerpoMensaje;
-    }
 }
