@@ -1,19 +1,16 @@
 public class Avion extends Vehiculo{
 
-    private int limiteInferiorAvion = 150;
-    private int limiteInferiorIntermedioAvion = 400;
-    private int limiteSuperiorAvion = 700;
 
-    public Avion() {
-
+    public Avion(int limiteInferior, int limiteInferiorIntermedio, int limiteSuperior) {
+        super( limiteInferior, limiteInferiorIntermedio, limiteSuperior);
     }
 
     @Override
     public int calcularComparendo(int velocidad, String tipoVehiculo) {
         if(tipoVehiculo == "AVION") {
-            if (velocidad <= limiteInferiorAvion) {
+            if (velocidad <= getLimiteInferior()) {
                 return 0;
-            } else if (velocidad >= limiteInferiorIntermedioAvion && velocidad <= limiteSuperiorAvion) {
+            } else if (velocidad >= getLimiteInferiorIntermedio() && velocidad <= getLimiteSuperior()) {
                 return 1;
             } else {
                 return 2;

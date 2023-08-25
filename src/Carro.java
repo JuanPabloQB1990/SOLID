@@ -1,18 +1,16 @@
 public class Carro extends Vehiculo{
-    private int limiteInferiorCarro = 65;
-    private int limiteInferiorIntermedioCarro = 66;
-    private int limiteSuperiorCarro = 85;
 
-    public Carro() {
 
+    public Carro(int limiteInferior, int limiteInferiorIntermedio, int limiteSuperior) {
+        super( limiteInferior, limiteInferiorIntermedio, limiteSuperior);
     }
 
     @Override
     public int calcularComparendo(int velocidad, String tipoVehiculo) {
         if(tipoVehiculo == "CARRO") {
-            if (velocidad <= limiteInferiorCarro) {
+            if (velocidad <= getLimiteInferior()) {
                 return 0;
-            } else if (velocidad >= limiteInferiorIntermedioCarro && velocidad <= limiteSuperiorCarro) {
+            } else if (velocidad >= getLimiteInferiorIntermedio() && velocidad <= getLimiteSuperior()) {
                 return 1;
             } else {
                 return 2;
